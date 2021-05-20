@@ -1,0 +1,138 @@
+/* Float four columns side by side */
+.color-scheme-picker .column  {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  .color-scheme-icon .column {
+    float: left;
+    width: 5%;
+    padding: 0 5px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .color-scheme-picker {
+    margin: 0 -5px;
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    z-index: 99999;
+    width: 50%;
+  }
+  
+  .color-scheme-icon {
+    margin: 0 -5px;
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    z-index: 99999;
+    width: 100%;
+  }
+  
+  /* Clear floats after the columns */
+  .color-scheme-picker:after, .color-scheme-icon:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .color-scheme-picker .column {
+      width: 50%;
+      display: block;
+      margin-bottom: 22px;
+    }
+    .color-scheme-icon .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 22px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .color-scheme-picker .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  .color-scheme-picker .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  .color-scheme-icon .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #8FC43C;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  .card.card-title {
+    background: black;
+    color: white;
+  }
+  
+  .card.card-body {
+    padding: 0px;
+  }
+  
+  .btn.color-scheme-btn{
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn.color-scheme-btn span {
+    padding-left: 10px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: #F3F3F3;
+  }
+  
+  .gold-navy {
+    color: #DD9B2A;
+  }
+  
+  .red-black {
+    color: #8A0814;
+  }
+  
+  .green-black {
+    color: #8FC53C;
+  }
+  
+  .card-footer-close-btn-close, .card-footer-close-btn-close:hover {
+    background-color: #8FC43C;
+    color: white;
+  }
+  
+  .card.card-footer {
+    background: white;
+  }
+  
+  .color-scheme-picker.slideIn {
+    display: block;
+    transition: .5s ease;
+  }
+  
+  .color-scheme-picker {
+    display: none;
+  }
